@@ -1,0 +1,132 @@
+<template>
+  <div>
+    <md-table v-model="users" :table-header-color="tableHeaderColor">
+      <md-table-row slot="md-table-row" slot-scope="{ item }">
+        <md-table-cell md-label="Module">{{ item.module }}</md-table-cell>
+        <md-table-cell md-label="TD">{{ item.TD }}</md-table-cell>
+        <md-table-cell md-label="TP">{{ item.TP }}</md-table-cell>
+        <md-table-cell md-label="CI">{{ item.CI }}</md-table-cell>
+        <md-table-cell md-label="EMD">{{ item.EMD }}</md-table-cell>
+      </md-table-row>
+    </md-table>
+    
+    
+<form>
+    <md-card>
+      <md-card-header :data-background-color="dataBackgroundColor" >
+        <h4 class="title">Réclamations</h4>
+        <p class="category">Indiquer le nom du module et le niveau de l'erreur</p>
+      </md-card-header>
+
+      <md-card-content>
+        <div class="md-layout">
+          
+          <div class="md-layout-item md-size-100">
+            <md-field maxlength="5">
+              <label>About Me</label>
+              <md-textarea v-model="aboutme"></md-textarea>
+            </md-field>
+          </div>
+          <div class="md-layout-item md-size-100 text-right">
+            <md-button class="md-raised md-success">Envoyer</md-button>
+          </div>
+        </div>
+      </md-card-content>
+    </md-card>
+  </form>    
+
+  </div>
+ 
+</template>
+
+<script>
+export default {
+  module: "simple-table",CI: "simple-table",TD: "simple-table",TP: "simple-table",EMD: "simple-table",
+  props: {
+    dataBackgroundColor: {
+      type: String,
+      default: ""
+    }
+    },
+  props: {
+    tableHeaderColor: {
+      type: String,
+      default: ""
+    }
+    
+  },
+  
+    
+  
+  data() {
+    return {
+      selected: [],
+      users: [
+        {
+          module: "IGL",
+         TD: "13",
+         TP: "14",
+         CI: "11",
+         EMD:"16"
+        },
+        {
+          module: "ANUM",
+           TD: "13",
+         TP: "14",
+         CI: "11",
+         EMD:"16"
+        },
+        {
+          module: "THP",
+           TD: "13",
+         TP: "14",
+         CI: "11",
+         EMD:"16"
+        },
+        {
+          module: "ORGA",
+           TD: "13",
+         TP: "14",
+         CI: "11",
+         EMD:"16"
+        },
+        {
+          module: "SYC1",
+        TD: "13",
+         TP: "14",
+         CI: "11",
+         EMD:"16"
+        },
+        {
+            module: "RO",
+        TD: "13",
+         TP: "14",
+         CI: "11",
+         EMD:"16"
+        },
+         {
+             module: "RES1",
+        TD: "13",
+         TP: "14",
+         CI: "11",
+         EMD:"16"
+        },
+         {
+          module: "ANG4",
+           TD: "13",
+         TP: "14",
+         CI: "11",
+         EMD:"16"
+        },
+         {
+     
+      aboutme:
+        ""
+    }
+      ]
+    }
+  }
+};
+    
+  
+</script>
