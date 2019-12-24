@@ -1,7 +1,7 @@
 .md-toolbar {
   min-height: 56px;
-  padding: 10px 15px;
-  border-radius: 3px;
+  padding: 1px 6px;
+  border-radius: 1px;
 
   &.md-transparent{
     background-color: transparent !important;
@@ -40,7 +40,7 @@
         .open > &.dropdown-toggle,
         .open > &.dropdown-toggle:focus,
         .open > &.dropdown-toggle:hover{
-          color: $black-color !important;
+          color: white !important;
         }
 
         i{

@@ -220,7 +220,7 @@
 
     [data-background-color="blue"],
     .md-tabs.md-info .md-tabs-navigation{
-        background: linear-gradient(60deg, $cyan-400, $cyan-600);
+        background: #253999;
         @include shadow-big-color($brand-info);
     }
 
@@ -243,7 +243,7 @@
     }
 
     [data-background-color]{
-        color: $white-color;
+        color: #253999;
 
         a{
             color: $white-color;
@@ -271,7 +271,7 @@
             line-height: 56px;
             width: 56px;
             height: 56px;
-            color: $white-color !important;
+            color: #253999 !important;
         }
     }
     .md-card-content{
@@ -303,6 +303,7 @@
     .md-card-header{
         margin-left: 0;
         margin-right: 0;
+        //color: #253999;
     }
     .content{
         padding-left: 5px;

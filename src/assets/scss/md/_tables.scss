@@ -39,24 +39,24 @@
 
 .md-card-plain .md-card-content > div .md-table .md-table-content,
 .md-card-plain .md-card-content > div .md-table {
-  background-color: transparent !important;
+  background-color: #253999 !important;
 }
 
 .md-table{
   &[table-header-color="orange"] .md-table-head{
-    color: $brand-warning !important;
+    color: #253999!important;
   }
   &[table-header-color="purple"] .md-table-head{
-    color: $brand-primary !important;
+    color:#253999!important;
   }
   &[table-header-color="blue"] .md-table-head{
-    color: $brand-info !important;
+    color:#253999 !important;
   }
   &[table-header-color="red"] .md-table-head{
-    color: $brand-danger !important;
+    color: #253999 !important;
   }
   &[table-header-color="green"] .md-table-head{
-    color: $brand-success !important;
+    color:#253999 !important;
   }
 
   .md-table-row td{

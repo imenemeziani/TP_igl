@@ -1,13 +1,11 @@
 import DashboardLayout from "@/pages/Layout/DashboardLayout.vue";
 
 import Dashboard from "@/pages/Dashboard.vue";
-import UserProfile from "@/pages/UserProfile.vue";
-import TableList from "@/pages/TableList.vue";
-import Typography from "@/pages/Typography.vue";
-import Icons from "@/pages/Icons.vue";
-import Maps from "@/pages/Maps.vue";
-import Notifications from "@/pages/Notifications.vue";
-import UpgradeToPRO from "@/pages/UpgradeToPRO.vue";
+import UserProfile from "@/pages/Ajouter.vue";
+import TableList from "@/pages/Affichage_notes.vue";
+import Login from "@/components/login.vue";
+import Typography from "@/pages/hors_serv.vue";
+
 
 const routes = [
   {
@@ -18,7 +16,10 @@ const routes = [
       {
         path: "dashboard",
         name: "Dashboard",
-        component: Dashboard
+        component: Dashboard,
+        meta: {
+          auth: true
+      }
       },
       {
         path: "user",
@@ -36,28 +37,16 @@ const routes = [
         component: Typography
       },
       {
-        path: "icons",
-        name: "Icons",
-        component: Icons
-      },
-      {
-        path: "maps",
-        name: "Maps",
+        path: '@/components/login',
+        name: 'login',
+        component: Login,
         meta: {
-          hideFooter: true
-        },
-        component: Maps
-      },
-      {
-        path: "notifications",
-        name: "Notifications",
-        component: Notifications
-      },
-      {
-        path: "upgrade",
-        name: "Upgrade to PRO",
-        component: UpgradeToPRO
+          auth: false
       }
+      },
+     
+     
+     
     ]
   }
 ];

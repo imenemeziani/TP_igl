@@ -11,19 +11,19 @@
     </md-table>
     
     
-<form>
-    <md-card>
-      <md-card-header :data-background-color="dataBackgroundColor" >
-        <h4 class="title">Réclamations</h4>
-        <p class="category">Indiquer le nom du module et le niveau de l'erreur</p>
-      </md-card-header>
-
+<div>
+    
       <md-card-content>
         <div class="md-layout">
-          
+           <div class="md-layout-item md-size-100">
+            <md-field maxlength="5">
+              <h4>Module: </h4>
+              <md-textarea v-model="aboutme"></md-textarea>
+            </md-field>
+          </div>
           <div class="md-layout-item md-size-100">
             <md-field maxlength="5">
-              <label>About Me</label>
+              <h4>Réclamation : </h4>
               <md-textarea v-model="aboutme"></md-textarea>
             </md-field>
           </div>
@@ -32,8 +32,8 @@
           </div>
         </div>
       </md-card-content>
-    </md-card>
-  </form>    
+    
+  </div>    
 
   </div>
  
@@ -130,3 +130,4 @@ export default {
     
   
 </script>
+<style lang="css"></style>

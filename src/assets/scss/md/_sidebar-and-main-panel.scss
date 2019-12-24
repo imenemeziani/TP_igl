@@ -275,6 +275,7 @@
 
     &[data-color="blue"]{
         @include set-background-color-button($brand-info);
+        
     }
     &[data-color="green"]{
         @include set-background-color-button($brand-success);
