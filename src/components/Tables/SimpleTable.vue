@@ -12,24 +12,33 @@
     
     
 <div>
+<<<<<<< HEAD
     <form class="flex flex-col" @submit.prevent="submitReclam" method="post" action="SimpleTable.vue" >
+=======
+    
+    <form class="flex flex-col" @submit.prevent="submitReclam">
+>>>>>>> fe90d2f27a6484575ce5ff1b85a07cbb11a4a3a2
       <md-card-content>
         <div class="md-layout">
-           <div class="md-layout-item md-size-100">
+
+          <div class="md-layout-item md-size-100">
             <md-field maxlength="5">
               <h4>Module: </h4>
               <md-textarea v-model="mod"></md-textarea>
             </md-field>
           </div>
+
           <div class="md-layout-item md-size-100">
             <md-field maxlength="5">
               <h4>Réclamation : </h4>
               <md-textarea v-model="contenu"></md-textarea>
             </md-field>
           </div>
+
           <div class="md-layout-item md-size-100 text-right">
             <md-button type="submit" class="md-raised md-success">Envoyer</md-button>
           </div>
+
         </div>
       </md-card-content>
     </form>
@@ -55,10 +64,8 @@ export default {
     }
     
   },
-  
-    
-  
-  data() {
+
+ data() {
     return {
      
       users: [
@@ -118,6 +125,7 @@ export default {
          CI: "11",
          EMD:"16"
         },
+<<<<<<< HEAD
          ],
          methods : {
            tablemodule()
@@ -133,10 +141,20 @@ export default {
              
            },
          },
+=======
+      ]
+>>>>>>> fe90d2f27a6484575ce5ff1b85a07cbb11a4a3a2
     }
-  }
-};
-    
+  },
+
+  methods : {
+
+      submitReclam() {
+      console.log(this.contenu)
+      },
+
+  },
+}
   
 </script>
 <style lang="css"></style>
