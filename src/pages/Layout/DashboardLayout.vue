@@ -1,15 +1,15 @@
 <template>
   <div class="wrapper" :class="{ 'nav-open': $sidebar.showSidebar }">
-    <notifications></notifications>
+  
 
   <side-bar>
-      <mobile-menu slot="content"></mobile-menu>
+    
       
-      <sidebar-link to="/user">
+      <sidebar-link to="/Ajouter etudiant">
         <md-icon>person</md-icon>
         <p>Ajouter étudiant </p>
       </sidebar-link>
-      <sidebar-link to="/table">
+      <sidebar-link to="/Mesnotes">
         <md-icon>content_paste</md-icon>
         <p>Mes notes</p>
       </sidebar-link>
@@ -21,11 +21,15 @@
         <md-icon>group</md-icon>
         <p>Affectation étudiant</p>
       </sidebar-link>
+      
       <sidebar-link to="/typography">
         <md-icon>delete</md-icon>
         <p>Supprimer étudiant</p>
       </sidebar-link>
-     
+     <sidebar-link to="/logout">
+        <md-icon>logout</md-icon>
+        <p>Déconnexion</p>
+      </sidebar-link>
       
     </side-bar>
 
@@ -43,14 +47,14 @@
 import TopNavbar from "./TopNavbar.vue";
 import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./Content.vue";
-import MobileMenu from "@/pages/Layout/MobileMenu.vue";
+
 
 export default {
   components: {
     TopNavbar,
     DashboardContent,
     ContentFooter,
-   MobileMenu
+   
   }
 };
 </script>

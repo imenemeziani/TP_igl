@@ -22,12 +22,12 @@ const routes = [
       }
       },
       {
-        path: "user",
+        path: "Ajouter etudiant",
         name: "User Profile",
         component: UserProfile
       },
       {
-        path: "table",
+        path: "Mesnotes",
         name: "Table List",
         component: TableList
       },
@@ -37,13 +37,12 @@ const routes = [
         component: Typography
       },
       {
-        path: '@/components/login',
-        name: 'login',
-        component: Login,
-        meta: {
-          auth: false
-      }
+        path: "logout",
+        name: "Login",
+        component: Login
       },
+     
+      
      
      
      

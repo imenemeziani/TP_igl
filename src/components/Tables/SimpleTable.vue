@@ -12,27 +12,27 @@
     
     
 <div>
-    
+    <form class="flex flex-col" @submit.prevent="submitReclam" method="post" action="SimpleTable.vue" >
       <md-card-content>
         <div class="md-layout">
            <div class="md-layout-item md-size-100">
             <md-field maxlength="5">
               <h4>Module: </h4>
-              <md-textarea v-model="aboutme"></md-textarea>
+              <md-textarea v-model="mod"></md-textarea>
             </md-field>
           </div>
           <div class="md-layout-item md-size-100">
             <md-field maxlength="5">
               <h4>Réclamation : </h4>
-              <md-textarea v-model="aboutme"></md-textarea>
+              <md-textarea v-model="contenu"></md-textarea>
             </md-field>
           </div>
           <div class="md-layout-item md-size-100 text-right">
-            <md-button class="md-raised md-success">Envoyer</md-button>
+            <md-button type="submit" class="md-raised md-success">Envoyer</md-button>
           </div>
         </div>
       </md-card-content>
-    
+    </form>
   </div>    
 
   </div>
@@ -60,7 +60,7 @@ export default {
   
   data() {
     return {
-      selected: [],
+     
       users: [
         {
           module: "IGL",
@@ -118,12 +118,21 @@ export default {
          CI: "11",
          EMD:"16"
         },
-         {
-     
-      aboutme:
-        ""
-    }
-      ]
+         ],
+         methods : {
+           tablemodule()
+           {
+               },
+           submitReclam() {
+             axios.post('url',{
+               Reclamation: this.contenu,
+               Module: this.mod
+
+             })
+             console.log(this.contenu);
+             
+           },
+         },
     }
   }
 };
