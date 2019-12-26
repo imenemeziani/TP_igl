@@ -12,12 +12,8 @@
     
     
 <div>
-<<<<<<< HEAD
-    <form class="flex flex-col" @submit.prevent="submitReclam" method="post" action="SimpleTable.vue" >
-=======
     
     <form class="flex flex-col" @submit.prevent="submitReclam">
->>>>>>> fe90d2f27a6484575ce5ff1b85a07cbb11a4a3a2
       <md-card-content>
         <div class="md-layout">
 
@@ -49,6 +45,7 @@
 </template>
 
 <script>
+ import axios from 'axios';
 export default {
   module: "simple-table",CI: "simple-table",TD: "simple-table",TP: "simple-table",EMD: "simple-table",
   props: {
@@ -70,91 +67,30 @@ export default {
      
       users: [
         {
-          module: "IGL",
-         TD: "13",
-         TP: "14",
-         CI: "11",
-         EMD:"16"
+        
         },
-        {
-          module: "ANUM",
-           TD: "13",
-         TP: "14",
-         CI: "11",
-         EMD:"16"
-        },
-        {
-          module: "THP",
-           TD: "13",
-         TP: "14",
-         CI: "11",
-         EMD:"16"
-        },
-        {
-          module: "ORGA",
-           TD: "13",
-         TP: "14",
-         CI: "11",
-         EMD:"16"
-        },
-        {
-          module: "SYC1",
-        TD: "13",
-         TP: "14",
-         CI: "11",
-         EMD:"16"
-        },
-        {
-            module: "RO",
-        TD: "13",
-         TP: "14",
-         CI: "11",
-         EMD:"16"
-        },
-         {
-             module: "RES1",
-        TD: "13",
-         TP: "14",
-         CI: "11",
-         EMD:"16"
-        },
-         {
-          module: "ANG4",
-           TD: "13",
-         TP: "14",
-         CI: "11",
-         EMD:"16"
-        },
-<<<<<<< HEAD
-         ],
-         methods : {
-           tablemodule()
-           {
-               },
-           submitReclam() {
-             axios.post('url',{
-               Reclamation: this.contenu,
-               Module: this.mod
-
-             })
-             console.log(this.contenu);
-             
-           },
-         },
-=======
+     
       ]
->>>>>>> fe90d2f27a6484575ce5ff1b85a07cbb11a4a3a2
     }
   },
 
   methods : {
 
       submitReclam() {
+        axios.post('http://127.0.0.1:8000/api/reclamation'),
       console.log(this.contenu)
       },
 
   },
-}
+  mounted()
+  {
+    axios.get('url table affichage').then((tableback)=> {
+      this.users=tableback.date[0];
+      console.log(tableback.data[0]);
+    })
+    console.log(this.users);
+  },
+};
   
 </script>
 <style lang="css"></style>
