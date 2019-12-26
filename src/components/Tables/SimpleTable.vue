@@ -12,12 +12,7 @@
     
     
 <div>
-<<<<<<< HEAD
     <form class="flex flex-col" @submit.prevent="submitReclam" method="post" action="SimpleTable.vue" >
-=======
-    
-    <form class="flex flex-col" @submit.prevent="submitReclam">
->>>>>>> fe90d2f27a6484575ce5ff1b85a07cbb11a4a3a2
       <md-card-content>
         <div class="md-layout">
 
@@ -49,6 +44,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   module: "simple-table",CI: "simple-table",TD: "simple-table",TP: "simple-table",EMD: "simple-table",
   props: {
@@ -125,36 +121,27 @@ export default {
          CI: "11",
          EMD:"16"
         },
-<<<<<<< HEAD
          ],
+    }
+ },
          methods : {
            tablemodule()
            {
                },
+
            submitReclam() {
-             axios.post('url',{
-               Reclamation: this.contenu,
-               Module: this.mod
+              console.log(this.contenu);
+             axios.post('http://127.0.0.1:8000/api/reclamation',{
+               mod : this.mod,
+               contenu : this.contenu
+
 
              })
-             console.log(this.contenu);
              
            },
          },
-=======
-      ]
->>>>>>> fe90d2f27a6484575ce5ff1b85a07cbb11a4a3a2
     }
-  },
 
-  methods : {
-
-      submitReclam() {
-      console.log(this.contenu)
-      },
-
-  },
-}
   
 </script>
 <style lang="css"></style>
