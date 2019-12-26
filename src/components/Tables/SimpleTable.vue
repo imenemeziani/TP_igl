@@ -71,25 +71,26 @@ export default {
         },
      
       ]
-    }
-  },
-
-  methods : {
-
-      submitReclam() {
+    };
+    },
+methods:
+{
+submitReclam() {
         axios.post('http://127.0.0.1:8000/api/reclamation'),
       console.log(this.contenu)
       },
+},
+      
 
-  },
-  mounted()
+  
+  /*mounted()
   {
     axios.get('url table affichage').then((tableback)=> {
       this.users=tableback.date[0];
       console.log(tableback.data[0]);
     })
     console.log(this.users);
-  },
+  },*/
 };
   
 </script>
