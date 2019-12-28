@@ -1,7 +1,9 @@
+
 <template>
   <div>
-    <md-table v-model="users" :table-header-color="tableHeaderColor">
+    <md-table v-model="table_notes" :table-header-color="tableHeaderColor">
       <md-table-row slot="md-table-row" slot-scope="{ item }">
+        <!--ici c'est les colonnes-->
         <md-table-cell md-label="Module">{{ item.module }}</md-table-cell>
         <md-table-cell md-label="TD">{{ item.TD }}</md-table-cell>
         <md-table-cell md-label="TP">{{ item.TP }}</md-table-cell>
@@ -47,7 +49,7 @@
 <script>
  import axios from 'axios';
 export default {
-  module: "simple-table",CI: "simple-table",TD: "simple-table",TP: "simple-table",EMD: "simple-table",
+ 
   props: {
     dataBackgroundColor: {
       type: String,
@@ -65,31 +67,29 @@ export default {
  data() {
     return {
      
-      users: [
-        {
-        
-        },
-     
-      ]
-    }
-  },
-
-  methods : {
-
-      submitReclam() {
+      table_notes :[{}] 
+          }
+       },
+methods:
+{
+submitReclam() {
         axios.post('http://127.0.0.1:8000/api/reclamation'),
       console.log(this.contenu)
       },
+},
+      mounted () {
+    axios
+      .get('hi nesrine , met ici le lien de ton api')
+      .then((response) => {
 
-  },
-  mounted()
-  {
-    axios.get('url table affichage').then((tableback)=> {
-      this.users=tableback.date[0];
-      console.log(tableback.data[0]);
-    })
-    console.log(this.users);
-  },
+                         this.table_notes = response;
+                        console.log(response);// vérifie dans ta console ce que reponse qui est ta table du back affiche ! 
+                          }
+           )
+      console.log(this.table_notes);
+  }
+
+ 
 };
   
 </script>

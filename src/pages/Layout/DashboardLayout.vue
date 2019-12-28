@@ -26,10 +26,7 @@
         <md-icon>delete</md-icon>
         <p>Supprimer étudiant</p>
       </sidebar-link>
-     <sidebar-link to="/logout">
-        <md-icon>logout</md-icon>
-        <p>Déconnexion</p>
-      </sidebar-link>
+ 
       
     </side-bar>
 
