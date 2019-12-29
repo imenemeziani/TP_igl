@@ -73,7 +73,10 @@ export default {
 methods:
 {
 submitReclam() {
-        axios.post('http://127.0.0.1:8000/api/reclamation'),
+        axios.post('http://127.0.0.1:8000/api/reclamation',{
+              Reclamation: this.contenu,
+               Module: this.mod,
+        }),
       console.log(this.contenu)
       },
 },
