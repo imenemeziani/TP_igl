@@ -2,7 +2,7 @@
   <div class="content">
     <div class="md-layout">
       <div class="md-layout-item md-medium-size-100 md-size-99">
-        <edit-profile-form data-background-color="green"> </edit-profile-form>
+        <ajout data-background-color="green"> </ajout>
       </div>
      
     </div>
@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import { EditProfileForm } from "@/pages";
+import { ajout } from "@/pages";
 
 export default {
   components: {
-    EditProfileForm
+    ajout
 
   }
 };

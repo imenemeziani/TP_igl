@@ -6,16 +6,16 @@ RUN npm install -g http-server
 # définit le dossier 'app' comme dossier de travail
 WORKDIR /app
 
-# copie 'package.json' et 'package-lock.json' (si disponible)
+# copie 'package.json*'
 COPY package*.json ./
 
-# installe les dépendances du projet
+# installe npm
 RUN npm install
 
-# copie les fichiers et dossiers du projet dans le dossier de travail (par exemple : le dossier 'app')
+# copie les fichiers et dossiers du projet dans le dossier de travail
 COPY . .
 
-# construit l'app pour la production en la minifiant
+# construit l'app 
 RUN npm run build
 
 EXPOSE 8080

@@ -2,6 +2,6 @@
 
 
 // Forms
-import EditProfileForm from "../pages/UserProfile/EditProfileForm.vue";
+import ajout from "../pages/ajout-etu/ajout.vue";
 
-export {  EditProfileForm };
+export {  ajout };

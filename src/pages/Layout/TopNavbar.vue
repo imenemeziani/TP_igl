@@ -13,7 +13,7 @@
 
        
 
-                       <md-list-item href="#/logout">
+                       <md-list-item href="">
                         <h4  >
                 Déconnexion
                 </h4>
